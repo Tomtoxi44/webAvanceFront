@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { LogoMenuComponent } from '../../logo-menu/logo-menu.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  imports: [
+    LogoMenuComponent
+  ],
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
 
