@@ -1,0 +1,17 @@
+<div>
+    <a (click)="onLogoClick()">
+        <img [ngClass]="{'shadow-main': !isMenuVisible, 'shadow-[inset_0px_0px_5px_rgba(0,0,0,0.8)]': isMenuVisible}"
+            class="w-28 h-28 border-2 border-black rounded-lg mr-20"
+            src="https://s3-alpha-sig.figma.com/img/eddd/f16f/c2036c416b1b52063e24cc7840e4a798?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PpJ9eqG-ycdViggRBqwf-0KSYG2b6z-CAjMJV3QzBbB8nBTtcE~saSEcmSH7XJOESJQj3CAOIqWoufCWkfCrNQ8Dbrc5DQQU2UmVS3vWHZbZloou6tJZWwirguUqVhy8Wpa-mM9Of-ngOjubC1tpMqpVDmBaqw7r37FzI8Ahp5tRGxKHtYRIe~rYfd~LgI0FBE0OyjJ3dKNz-3iYrJSx-vW6hsv39stDiM0a65a0WxbQUP~ZSzM9eJTozrwStu8ijid~BrLO5XWqrYKGPfkY6bvWK3~T3ey3KEM8vnlaH-G~63~5avDRI8vhEzhF3Bw8ycGDAI7Mmx9DSMwItOpZmQ__"
+            alt="logo2">
+    </a>
+    <div *ngIf="isMenuVisible"
+        class="absolute bg-[#E7E7DB] border-2 border-[#FF010A] p-3 rounded-lg flex flex-col gap-2">
+        <a href="">Nouvelle aventure</a>
+        <div class="h-[1px] bg-[#FF010A] w-4/5 m-auto"></div>
+        <a href="">Mes aventures</a>
+        <div class="h-[1px] bg-[#FF010A] w-4/5 m-auto"></div>
+        <a href="">Trucs</a>
+        <div class="h-[1px] bg-[#FF010A] w-4/5 m-auto"></div>
+        <a href="">Je ne sais pas</a>
+    </div>
