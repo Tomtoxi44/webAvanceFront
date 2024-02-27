@@ -9,9 +9,11 @@ import { Component, Input  } from '@angular/core';
   styleUrl: './navbutton.component.css'
 })
 export class NavbuttonComponent {
-  public label: string = 'Button label'
-  @Input()
-  display?: boolean;
-  @Input()
-  displayFalse?: boolean;
+  @Input() display?: boolean;
+  @Input() displayFalse?: boolean;
+  isContentVisible = false;
+
+  toggleButtonVisibility() {
+    this.isContentVisible = !this.isContentVisible;
+  }
 }
