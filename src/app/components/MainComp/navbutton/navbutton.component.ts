@@ -10,8 +10,4 @@ import { Component, Input  } from '@angular/core';
 })
 export class NavbuttonComponent {
   public label: string = 'Button label'
-  @Input()
-  display?: boolean;
-  @Input()
-  displayFalse?: boolean;
 }
