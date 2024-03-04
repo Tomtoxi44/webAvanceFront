@@ -8,8 +8,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './logo-menu.component.html'
 })
 export class LogoMenuComponent {
-
+  imagePath = 'assets/Logod&d.png';
   isMenuVisible = false;
+  
 
   onLogoClick(): void {
     console.log("Logo cliqué !");
