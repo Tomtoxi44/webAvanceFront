@@ -10,5 +10,5 @@ import { LogoMenuComponent } from '../../logo-menu/logo-menu.component';
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
-
+  imagePath = 'assets/d&d.png';
 }
