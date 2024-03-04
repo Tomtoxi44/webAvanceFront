@@ -1,1 +1,12 @@
 <button class="bg-[#E7E7DB] h-32 w-8"><ng-content /></button>
+<!-- 
+<button *ngIf="display" (click)="toggleButtonVisibility()" class="border border-black h-52 w-52"><ng-content *ngIf="display || displayFalse"></ng-content></button>
+<button *ngIf="displayFalse" (click)="toggleButtonVisibility()" class="border border-black h-52 w-52"><ng-content *ngIf="display || displayFalse"></ng-content></button> -->
+
+
+  <button *ngIf="display" (click)="toggleButtonVisibility()" class="border h-52 w-52">
+    <ng-content></ng-content>
+  </button>
+  <button *ngIf="displayFalse" (click)="toggleButtonVisibility()" class="border h-52 w-52 bg-red-600">
+    <ng-content></ng-content>
+  </button>
