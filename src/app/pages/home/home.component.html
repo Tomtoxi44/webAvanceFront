@@ -1,0 +1,8 @@
+<main class="bg-[#333333] p-4">
+    <div class="flex flex-row gap-5 min-h-screen h-fit flex-wrap">
+        <div class="bg-slate-400 shadow border border-red-500 rounded-lg m-auto items-center" *ngFor="let article of articles">
+                <app-articles [truc]="article" ></app-articles>
+            
+        </div>
+    </div> 
+</main>
