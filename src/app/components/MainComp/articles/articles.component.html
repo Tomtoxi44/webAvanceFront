@@ -8,6 +8,6 @@
     </div>
     <div class="flex flex-col justify-between items-center">
         <p class=" font-jacques-francois">quantité: 0</p>
-        <button class=" bg-red-950 rounded-lg w-14 h-7">Ajouter</button>
+        <button *ngIf="afficherBouton" (click)="addToItem()" class=" bg-red-500 shadow border border-black rounded-lg w-14 h-7">Ajouté</button>
     </div>
 </div>

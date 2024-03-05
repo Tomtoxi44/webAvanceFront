@@ -13,11 +13,20 @@ import { IArticle } from '../../interface/iarticle';
 })
 export class HomeComponent  implements OnInit, OnDestroy {
   constructor(private servicesService: ApiEcommerceService) { }
-
   public articles: IArticle[] = [];
+  public panier: IArticle[] = [];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loadArticles();
+
+    const stockedBasket = localStorage.getItem("panier");
+    if (stockedBasket) {
+      const parsedBasket = JSON.parse(stockedBasket)
+
+      parsedBasket.map((el: IArticle) => {
+        this.panier.push(el)
+      })
+    }
   }
 
   loadArticles() {
@@ -34,7 +43,14 @@ export class HomeComponent  implements OnInit, OnDestroy {
       }
     )
   }
-  ngOnDestroy(): void {
+
+
+  addToItem(truc: IArticle) {
+      this.panier.push(truc)
+    localStorage.setItem("panier", JSON.stringify(this.panier)) 
+  }
+  
+   ngOnDestroy(): void {
   }
 }
 
